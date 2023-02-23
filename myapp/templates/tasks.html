@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    {% extends 'nav.html' %}
+
+    {% block content %}
+    <h1>Tasks</h1>
+    
+          
+          {% for task in tasks %}
+            <h1>title: {{task.title}}</h2>
+            <h2>description {{task.description}}</h2>
+            <p>project: {{task.project}}</p>
+            {% if task.done == True %}
+
+            <p>Tarea hecha</p>
+
+            {% else %}
+
+            <p>Tarea pendiente</p>
+
+            {% endif %}
+          
+          {% endfor %}
+          
+          
+          {% endblock %}
+</body>
+</html>

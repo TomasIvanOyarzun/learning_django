@@ -9,12 +9,13 @@
     <script src='main.js'></script>
 </head>
 <body>
-    <h1>Bienevido , Backend con Djando</h1>
+    <h1><strong>Backend</strong> con Djando</h1>
     <h2>Objetivos principales</h2>
         <ul>
             <li>Aprender los principios de Djando</li>
             <li>Armas rutas</li>
             <li>Manejar base de datos ORM</li>
+            <li>Rutas con Render (jinja)</li>
         
         </ul>
 
@@ -29,12 +30,22 @@
         
     <h2>Rutas:</h2>
         <ul>
-            <li><a href="http://127.0.0.1:3001/">/</a></li>
-            <li><a href="http://127.0.0.1:3001/projects" target="_blank">/projects</a></li>
-            <li><a href="http://127.0.0.1:3001/tasks" target="_blank">/tasks</a></li>
-            <li><a href="http://127.0.0.1:3001/tasks" target="_blank">/tasks/:id</a></li>
+            <li><a href="/">/</a></li>
+            <li><a href="/projects" target="_blank">/projects</a></li>
+            <li><a href="/tasks" target="_blank">/tasks</a></li>
+            <li><a href="/tasks" target="_blank">/tasks/:id</a></li>
+            
         
-        </ul>    
+        </ul>
+        
+        
+        <h2>Rutas con jinja:</h2>
+        <ul>
+            
+            <li><a href="/tasks/render" target="_blank">/tasks/render</a></li>
+            <li><a href="/projects/render" target="_blank">/projects/render</a></li>
+        
+        </ul>     
 
 
 </body>

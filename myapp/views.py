@@ -22,10 +22,21 @@ def get_all_projects(_):
     projects_db = list(Project.objects.values())
     return JsonResponse(projects_db, safe=False)
 
+def get_all_projects_render(request):
+    projects = Project.objects.all()
+    return render(request, 'projects.html',{
+        'projects' : projects
+    })
+
 def get_all_tasks(_):
     
     return JsonResponse(list(Task.objects.values()), safe=False)
 
+def get_all_tasks_render(request):
+    tasks = Task.objects.all()
+    return render(request, 'tasks.html',{
+        'tasks' : tasks
+    })
 def get_tasks_id(_,id):
     
     task =  Task.objects.get(id = id)
